@@ -39,8 +39,8 @@ The following tab triggers output a simple example of a loop in two different fo
 
     // Output Helpers
     csrf                     {{ getCsrfInput() }}
-    getFootHtml              {{ getFootHtml() }}
-    getHeadHtml              {{ getHeadHtml() }}
+    getfoothtml              {{ getFootHtml() }}
+    getheadhtml              {{ getHeadHtml() }}
 
     // craft.request
     getparam                 craft.request.getParam()
