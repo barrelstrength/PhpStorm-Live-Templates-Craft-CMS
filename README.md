@@ -81,7 +81,7 @@ The following tab triggers output a simple example of a loop in two different fo
 
 ## Installation
 
-Copy the `Craft CMS.xml` file to the location where PhpStorm stores Live Templates on your operating system. The PhpStorm docs provide [instructions on installing Live Templates](https://www.jetbrains.com/help/phpstorm/10.0/live-templates.html) on OSX, Windows, and Linux.
+Copy the `Craft CMS.xml` file to the location where PhpStorm stores Live Templates on your operating system. The PhpStorm docs provide [instructions on sharing Live Templates](https://www.jetbrains.com/help/phpstorm/sharing-live-templates.html) on OSX, Windows, and Linux.
 
 Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS** Live Templates are enabled.
 
