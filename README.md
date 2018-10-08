@@ -1,6 +1,6 @@
 # PhpStorm Live Templates for Craft CMS
 
-A library of PhpStorm Live Templates for Craft CMS. 
+A library of PhpStorm Live Templates for Craft CMS 2. 
 
 The **Craft CMS** Live Templates include various snippets for Craft-specific Twig tags and some other common use cases. Best when paired with [Twig - Extended](https://github.com/BarrelStrength/PhpStorm-Live-Templates-Twig-Extended) - a more extensive library of PhpStorm Live Templates for Twig.
 
