@@ -1,73 +1,98 @@
 # PhpStorm Live Templates for Craft CMS
 
-A library of PhpStorm Live Templates for Craft CMS 2. 
+Twig and PHP PhpStorm Live Templates for Craft CMS 3.
 
 The **Craft CMS** Live Templates include various snippets for Craft-specific Twig tags and some other common use cases. Best when paired with [Twig - Extended](https://github.com/BarrelStrength/PhpStorm-Live-Templates-Twig-Extended) - a more extensive library of PhpStorm Live Templates for Twig.
 
-## Twig
+## Craft CMS - Twig
 
 ### Craft Twig Tags (via tab trigger)
 
-The following tab triggers output a simple example of a loop in two different formats for their respective Craft tags. The first trigger, provides an example using chaining syntax (craft.entries.section('articles')). The second trigger with the same name ending with `o`, provides the same example using object syntax.
-
+    // Examples
     asset                    craft.assets.first()
-    assets, assetso          craft.assets loop
-    categories, categorieso  craft.categories loop
-    entries, entrieso        craft.entries loop
+    assets                   craft.assets loop
+    categories               craft.categories loop
+    entries                  craft.entries loop
     feed                     craft.feeds.getFeedItems loop
-    tags, tagso              craft.tags loop
-    users, userso            craft.users loop
-
-    cache                    {% cache %}...{% endcache %}
-    children                 {% children %}
-    exit                     {% exit 404 %}
-    ifchildren               {% ifchildren %}...{% endifchildren %}
-    includecss               {% includecss %}...{% endincludecss %}
-    includecssfile           {% includeCssFile "/resources/css/global.css" %}
-    includehirescss          {% includehirescss %}...{% endincludehirescss %}
-    includejs                {% includejs %}...{% endincludejs %}
-    includejsfile            {% includeJsFile "/resources/css/global.css" %}
     matrix, matrixif         Basic Matrix field loop using if statements
     matrixifelse             Basic Matrix field loop using if/elseif
     matrixswitch             Basic Matrix field loop using switch
-    nav                      {% nav item in items %}...{% endnav %}
     paginate                 Outputs example of pagination and prev/next links
+    tags                     craft.tags loop
+    users                    craft.users loop
+
+    // Output Helpers
+    cache                    {% cache %}...{% endcache %}
+    csrf                     {{ csrfInput() }}
+    children                 {% children %}
+    exit                     {% exit 404 %}
+    ifchildren               {% ifchildren %}...{% endifchildren %}
+    hook                     {% hook "$NAME$" %}
+    nav                      {% nav item in items %}...{% endnav %}
     redirect                 {% redirect 'login' %}
+    redirectinput            {{ redirectInput($URL$) }}
     requirelogin             {% requireLogin %}
     requirepermission        {% requirePermission "spendTheNight" %}
     switch                   {% switch variable %}...{% endswitch %}
 
-    // Output Helpers
-    csrf                     {{ getCsrfInput() }}
-    getfoothtml              {{ getFootHtml() }}
-    getheadhtml              {{ getHeadHtml() }}
+    css                      {% css %}...{% endcss %}
+    js                       {% js %}...{% endjs %}
+    registercssfile          {% do view.registerCssFile("css/style.css") %}
+    registerjsfile           {% do view.registerJsFile("js/script.js") %}
 
-    // craft.request
-    getparam                 craft.request.getParam()
-    getpost                  craft.request.getPost()
-    getquery                 craft.request.getQuery()
-    getsegment               craft.request.getSegment()
+    header                   {% header "string" %}
+    beginBody                {{ beginBody() }}
+    endbody                  {{ endBody() }}
+    head                     {{ head() }}
 
     // Closing tags
     case                     {% case "value" %}
     endcache                 {% endcache %}
     endifchildren            {% endifchildren %}
-    endincludecss            {% endincludecss %}
-    endincludehirescss       {% endincludehirescss %}
-    endincludejs             {% endincludejs %}
+    endcss                   {% endcss %}
+    endjs                    {% endjs %}
     endnav                   {% endnav %}
+
+    // craft.app
+    app                      craft.app.[CURSOR]
+    config                   craft.app.config.general.[CURSOR]
+    ismultisite              craft.app.isMultiSite
+    language                 craft.app.language
+    locale                   craft.app.locale
+
+    // craft.app.request
+    getparam                 craft.app.request.getParam("name")
+    getbodyparam             craft.app.request.getBodyParam("name")
+    getqueryparam            craft.app.request.getQueryParam("name")
+    getsegment               craft.app.request.getSegment(1)
+
+    // craft.app.i18n
+    alllocales               craft.app.i18n.allLocales
+    applocales               craft.app.i18n.appLocales
+    editablelocaleids        craft.app.i18n.editableLocaleIds
+    editablelocales          craft.app.i18n.editableLocales
+    getlocalebyid            craft.app.i18n.getLocaleById($ID$)
+    primarysitelocale        craft.app.i18n.primarySiteLocale
+    sitelocaleids            craft.app.i18n.siteLocaleIds
+    sitelocales              craft.app.i18n.siteLocales
 
 ### Craft Twig Functions (via tab trigger)
 
-    ciel                     ceil()
+    alias                    alias("@baseUrl/images/image.png")
+    ceil                     ceil()
+    classname                className(object)
+    clone                    clone(object)
     floor                    floor()
+    getenv                   getenv('name')
     max                      max()
     min                      min()
     round                    round()
     shuffle                  shuffle()
-    url, urla                url('path'), url('path', params, 'http', false)
+    svg                      svg('path')
+    url, urla                url('path'), url('path', params, 'https', false)
+    siteurl, siteurla        siteUrl('path'), siteUrl('path', params, 'https', 1)
 
-## PHP
+## Craft CMS - PHP
 
 ### Migrations (via tab trigger)
 
@@ -81,9 +106,14 @@ The following tab triggers output a simple example of a loop in two different fo
 
 ## Installation
 
-Copy the `Craft CMS.xml` file to the location where PhpStorm stores Live Templates on your operating system. The PhpStorm docs provide [instructions on sharing Live Templates](https://www.jetbrains.com/help/phpstorm/sharing-live-templates.html) on OSX, Windows, and Linux.
+Copy the Live Template group configuration files to the `templates` folder in the location where PhpStorm stores Live Templates on your operating system. Live template group configuration files are stored in the templates directory of the [IDE configuration directory](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory). 
 
-Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS** Live Templates are enabled.
+### Live Template group configuration files
+
+- Craft CMS - Twig.xml
+- Craft CMS - PHP.xml
+
+Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS - Twig** and **Craft CMS - PHP** Live Templates are enabled, as desired.
 
 ----
 

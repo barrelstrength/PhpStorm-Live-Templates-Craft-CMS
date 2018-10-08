@@ -1,0 +1,32 @@
+# DEVELOPMENT
+# ------------------------------------------------------------
+/vendor
+/bower_components/*
+/node_modules/*
+/build/*
+/yarn-error.log
+/npm-debug.log
+
+# MISC FILES
+# ------------------------------------------------------------
+!.gitignore
+!.gitkeep
+.cache
+.DS_Store
+Thumbs.db
+
+# Editors
+# ------------------------------------------------------------
+.idea
+.project
+.settings
+*.esproj
+*.sublime-workspace
+*.sublime-project
+*.tmproj
+*.tmproject
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
