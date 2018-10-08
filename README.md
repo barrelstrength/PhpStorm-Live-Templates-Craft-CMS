@@ -106,7 +106,7 @@ The **Craft CMS** Live Templates include various snippets for Craft-specific Twi
 
 ## Installation
 
-Copy the Live Template group configuration files to the `templates` folder in the location where PhpStorm stores Live Templates on your operating system. Live template group configuration files are stored in the templates directory of the [IDE configuration directory](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory). 
+Copy the Live Template group configuration files to the `templates` folder in the location where PhpStorm stores Live Templates on your operating system. Live template group configuration files are stored in the templates directory of the [IDE configuration directory](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory). If a `templates` folder doesn't exist in your configuration directory, go ahead and create it.
 
 ### Live Template group configuration files
 
