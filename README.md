@@ -106,14 +106,16 @@ The **Craft CMS** Live Templates include various snippets for Craft-specific Twi
 
 ## Installation
 
-Copy the Live Template group configuration files to the `templates` folder in the location where PhpStorm stores Live Templates on your operating system. Live template group configuration files are stored in the templates directory of the [IDE configuration directory](https://www.jetbrains.com/help/phpstorm/tuning-the-ide.html#config-directory). If a `templates` folder doesn't exist in your configuration directory, go ahead and create it.
+ 1. Go to *PhpStorm Preferences | Tools | Settings Repository*
+ 2. Add Read-only Source https://github.com/barrelstrength/PhpStorm-Live-Templates-Craft-CMS
+ 3. Restart PhpStorm
 
-### Live Template group configuration files
+Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS - Twig** and **Craft CMS - PHP** Live Templates are enabled, as desired.
 
 - Craft CMS - Twig.xml
 - Craft CMS - PHP.xml
 
-Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS - Twig** and **Craft CMS - PHP** Live Templates are enabled, as desired.
+
 
 ----
 
