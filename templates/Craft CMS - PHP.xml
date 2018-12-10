@@ -1,7 +1,7 @@
 <templateSet group="Craft CMS - PHP">
-  <template name="dd" value="Craft::dd($SELECTION$);" description="Craft::dd(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+  <template name="dd" value="\Craft::dd($SELECTION$);" description="Craft::dd(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="Twig" value="true" />
+      <option name="PHP" value="true" />
     </context>
   </template>
   <template name="migrate" value="class m$YEARMONTHDAY$_$HOURSMINUTESSECONDS$_$PLUGINHANDLE$_$DESCRIPTION$ extends BaseMigration&#10;{&#10;    /**&#10;     * @inheritdoc&#10;     */&#10;    public function safeUp()&#10;    {&#10;      $END$&#10;      &#10;      return true;&#10;    }&#10;&#9;&#10;    /**&#10;     * @inheritdoc&#10;     */&#10;    public function safeDown()&#10;    {&#10;        echo &quot;m1m$YEARMONTHDAY$_$HOURSMINUTESSECONDS$_$PLUGINHANDLE$_$DESCRIPTION$ cannot be reverted.\n&quot;;&#10;        return false;&#10;    }&#10;}" description="Create a new migration" toReformat="true" toShortenFQNames="true">
@@ -10,14 +10,14 @@
     <variable name="PLUGINHANDLE" expression="" defaultValue="&quot;pluginHandle&quot;" alwaysStopAt="true" />
     <variable name="DESCRIPTION" expression="" defaultValue="&quot;migrationDescription&quot;" alwaysStopAt="true" />
     <context>
-      <option name="Twig" value="true" />
+      <option name="PHP" value="true" />
     </context>
   </template>
   <template name="releasenotes" value="## $VERSION$ - $DATE$&#10;&#10;### Added&#10;- Added new feature&#10;&#10;### Changed&#10;- Improved existing feature&#10;&#9;&#10;### Fixed&#10;- Fixed issue ([#123])&#10;&#10;[#123]: https://github.com/user/plugin-name/issues/123&#10;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="VERSION" expression="" defaultValue="&quot;1.0.0&quot;" alwaysStopAt="true" />
     <variable name="DATE" expression="" defaultValue="&quot;2018-01-01&quot;" alwaysStopAt="true" />
     <context>
-      <option name="Twig" value="true" />
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>

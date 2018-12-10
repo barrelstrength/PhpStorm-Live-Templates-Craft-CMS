@@ -115,8 +115,6 @@ Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS - Tw
 - Craft CMS - Twig.xml
 - Craft CMS - PHP.xml
 
-
-
 ----
 
 ## Maintenance & Contributions
