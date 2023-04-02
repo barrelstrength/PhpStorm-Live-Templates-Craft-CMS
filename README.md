@@ -106,9 +106,10 @@ The **Craft CMS** Live Templates include various snippets for Craft-specific Twi
 
 ## Installation
 
- 1. Go to *PhpStorm Preferences | Tools | Settings Repository*
- 2. Add Read-only Source https://github.com/barrelstrength/PhpStorm-Live-Templates-Craft-CMS
- 3. Restart PhpStorm
+ 1. Download and enable the Settings Repository Plugin: *PhpStorm Preferences | Plugins | Settings Repository*
+ 2. Go to *PhpStorm Preferences | Tools | Settings Repository*
+ 3. Add Read-only Source https://github.com/barrelstrength/PhpStorm-Live-Templates-Craft-CMS
+ 4. Restart PhpStorm
 
 Visit `Preferences->Editor->Live Templates` and ensure that the **Craft CMS - Twig** and **Craft CMS - PHP** Live Templates are enabled, as desired.
 
